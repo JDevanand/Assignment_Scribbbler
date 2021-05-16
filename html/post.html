@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!--  Font Awesome file  -->
+    <script src="https://kit.fontawesome.com/bd3637186c.js" crossorigin="anonymous"></script>
+    <!-- Google Fonts file  -->
+    <link href="https://fonts.googleapis.com/css?family=Montez&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../styles/common.css" />
+    <link rel="stylesheet" href="../styles/post.css" />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <header>
+        <div class="flt-l" id="title-caption">
+            <span class="title"><b>ScriBBler</b></span>
+            <p id="caption">Explore, Imagine, Create</p>
+        </div>
+
+        <div class="flt-r hdr-btns">
+            <button type="button" class="btn-sign" id="btn-SignIn">Sign In</button>
+            <button type="button" class="btn-sign" id="btn-SignUp">Sign Up</button>
+        </div>
+    </header>
+
+    <div class="div-post-edit">
+
+        <div id="post-title">
+            <p></p>
+        </div>
+
+        <div>
+            <p id="post-author"></p>
+            <button class="btns edit" id="btn-edit" value="Edit"> Edit <i class="far fa-edit"
+                    aria-hidden="true"></i></button>
+            <button class="btns save" id="btn-save"> Save <i class="far fa-edit" aria-hidden="true"></i></button>
+        </div>
+
+        <div id="post-content">
+            <p></p>
+        </div>
+
+        <div>
+            <button class="btns" id="btn-like">
+                <span><i class="far fa-thumbs-up" aria-hidden="true"></i></span>
+                Like
+            </button>
+            <p id="count-likes"></p>
+        </div>
+
+        <div id="add-comment">
+            <textarea id="comment" placeholder="Leave a comment..."></textarea>
+            <button class="btns" id="btn-comment">Comment</button>
+        </div>
+
+        <p>All Comments</p>
+        <div id="view-all-comments"> </div>
+
+    </div>
+
+    <!-- Modal sign up-->
+    <div id="modal-signUp" class="modal">
+
+            <form class="modal-container">
+                <div class="modal-header">
+                    <h2>Get Started</h2>
+                    <span class="close" id="icn-close-modal" title="Close Modal">&times;</span>
+                </div>
+                <hr />
+
+                <div class="modal-content">
+                <label for="Name"><b>Name</b></label>
+                <input type="text" placeholder="Enter your name" name="Name" required
+                    oninvalid="this.setCustomValidity('Please fill out this field.')"
+                    oninput="this.setCustomValidity('')" />
+
+                <label for="Username"><b>Username</b></label>
+                <input type="text" placeholder="Enter your username" name="Username" required
+                    oninvalid="this.setCustomValidity('Please fill out this field.')"
+                    oninput="this.setCustomValidity('')" />
+
+                <label for="psw"><b>Password</b></label>
+                <input type="password" placeholder="Enter your password" name="psw" required
+                    oninvalid="this.setCustomValidity('Please fill out this field.')"
+                    oninput="this.setCustomValidity('')" />
+
+                <label for="psw-repeat"><b>Confirm Password</b></label>
+                <input type="password" placeholder="Re-enter your password" name="psw-repeat" required
+                    oninvalid="this.setCustomValidity('Please fill out this field.')"
+                    oninput="this.setCustomValidity('')" />
+
+                <div class="clearfix"></div>
+                    <button type="submit" class="btn-grn signupbtn">Sign Up</button>
+                </div>
+                
+                </div>
+            </form>
+    </div>
+
+    <!-- Modal sign in-->
+    <div id="modal-signIn" class="modal">
+
+        <form class="modal-container">
+            <div class="modal-header">
+                <h2>Welcome Back!</h2>
+                <span class="close" title="Close Modal">&times;</span>
+            </div>
+            <hr />
+
+            <div class="modal-content">
+                <label for="Username"><b>Username</b></label>
+                <input type="text" placeholder="Enter your username" name="Username" required
+                    oninvalid="this.setCustomValidity('Please fill out this field.')"
+                    oninput="this.setCustomValidity('')" />
+
+                <label for="psw"><b>Password</b></label>
+                <input type="password" placeholder="Enter your password" name="psw" required
+                    oninvalid="this.setCustomValidity('Please fill out this field.')"
+                    oninput="this.setCustomValidity('')" />
+
+                <div class="clearfix"></div>
+                <button type="submit" class="btn-grn signinbtn">Sign In</button>
+            </div>
+            <p id="non-member-signup">Not a member? <a href="#" type="button" id="link-signUp">Sign Up</a></p>
+    </div>
+    </form>
+    </div>
+
+    <script src="../scripts/post.js"></script>
+    <script src="../scripts/common.js"></script>
+
+</body>
+
+</html>
