@@ -1,0 +1,173 @@
+body {
+    background-color: #ffeedd;
+}
+
+.posts-container {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    row-gap: 2rem;
+    margin: 25px 0px;
+}
+
+.post {
+    display: grid;
+    width: 40vw;
+    height: max-content;
+    border-radius: 0.8rem;
+    grid-template-columns: 1fr 6fr;
+    overflow: hidden;
+}
+
+.post:hover {
+    box-shadow: 0px 0px 10px 1px rgba(119, 114, 114, 0.788);
+}
+
+.cardLeft {
+    grid-column: 1/2;
+    grid-row: 1/4;
+    word-wrap: normal;
+    border-top-left-radius: 0.8rem;
+    border-bottom-left-radius: 0.8rem;
+    background-color: white;
+    text-align: center;
+
+    font-size: 2.8vh;
+    font-weight: bolder;
+    color: rgb(99, 96, 96);
+
+    display: flex;
+    align-items: center;
+}
+
+.cardRight {
+    padding-left: 2%;
+    position: relative;
+    grid-column: 2/3;
+    grid-row: 1/4;
+    background-color: rgb(229, 227, 227);
+    border-top-right-radius: 0.8rem;
+    border-bottom-right-radius: 0.8rem;
+    
+    font-size: 2.8vh;
+}
+
+p {
+    margin: 3px 2px;
+}
+
+.card-title {
+    color: rgb(136, 133, 133);
+    width: 90%;
+    display: inline-block;
+}
+
+.flt-rht {
+    float: right;
+    margin-right: 1vw;
+}
+
+.icon-del {
+    display: block;
+    font-size: 2vh;
+    margin-top: 8px;
+}
+.icon-del::after{
+    clear:both;
+    content:"";
+    display:table;
+}
+
+.postContent {
+    overflow: hidden;
+    text-overflow: inherit;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+}
+
+.icon-ellipsis:hover,
+.icon-del:hover {
+    cursor: pointer;
+}
+
+.dp-close {
+    position: absolute;
+    right: 15px;
+    top: 10px;
+    font-size: 25px;
+    color: #413f3f;
+}
+
+.modal-frm-deletepost {
+    background-color: #fefefe;
+    margin: 5% auto 15% auto;
+    /* 5% from the top, 15% from the bottom and centered */
+    padding: 2%;
+
+    width: 40%;
+
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    pointer-events: auto;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid rgba(0, 0, 0, .2);
+    border-radius: .3rem;
+    outline: 0;
+    text-align: center;
+}
+
+@media screen and (max-width: 450px) {
+    .modal-frm-deletepost {
+        width: 75%;
+        /* The width is 75%, when the viewport is 450px or smaller */
+        height: max-content;
+        padding: 5%;
+    }
+
+    .cardLeft,
+    .cardRight {
+        font-size: 2.5vw;
+    }
+
+    .icon-del {
+        font-size: 1.2vw;
+    }
+}
+
+@media screen and (max-width:700px) {
+    .cardLeft,
+    .cardRight {
+        font-size: 2.4vh;
+    }
+    
+    .icon-del {
+        font-size: 1.5vw;
+    }
+}
+
+.btn-dp {
+    width: 20%;
+    padding: 2%;
+    margin: 15px;
+}
+
+.cancelbtn {
+    background-color: rgba(255, 0, 0, 0.603);
+    color: white;
+    float: right;
+}
+
+.deletebtn {
+    background-color: green;
+    color: white;
+    float: left;
+}
+
+.clearfix ::after {
+    content: "";
+    display: table;
+    clear: both;
+}
