@@ -1,0 +1,109 @@
+  html,
+  body {
+    height: 100%;
+  }
+
+  .all-contents {
+    background-image: url("../images/background.jpg");
+    background-position: center;
+    background-size: auto;
+    background-repeat: no-repeat;
+    background-clip: border-box;
+    
+    height: 100%;
+    padding:1%;
+  }
+
+  .postbutton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+  }
+
+  .postbutton {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .postsbutton {
+    margin: 10px;
+    height: 3em;
+    width: 7em;
+    border-radius: 5px;
+    background-color: rgb(255, 196, 0);
+    color: black;
+    text-align: center;
+  }
+
+  .inline {
+    display: inline;
+  }
+
+  /*Change in dimension of create post modal*/
+  #modal-createPost .modal-container {
+    width: 80%;
+  }
+
+  .modal-header{
+    position: relative;
+    margin: 5px 0px;
+  }
+  .modal-header h2{
+    position: relative; 
+    margin: 5px 0px;   
+  }
+
+  .form-modal-createPost{
+      background-color:white;
+      width: 60%;
+      height: 75%;
+      border-radius: 0.3rem;
+
+  }
+
+  #post-content {
+    display: block;
+    resize:none;
+    height: 80%;
+    width: 100%;
+    margin: 0px;
+    border: none;
+    background: #f1f1f1;
+  }
+
+  #btn-createPost {
+    width: 20%;
+    padding: 1%;
+    background-color: #04AA6D;
+    color: white;
+    margin: 10px 0;
+    border: none;
+    cursor: pointer;
+    opacity: 0.8;
+    border-radius: 3px;
+  }
+
+  .btn-container{
+    display: flex;
+    justify-content: center;
+    margin:0px;    
+  }
+
+  @media screen and (max-width: 450px) {
+    .postbutton {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+    }
+  }
+
+  @media screen and (min-width:750px){
+    .all-contents{
+        background-size: 100%;
+    }    
+  }

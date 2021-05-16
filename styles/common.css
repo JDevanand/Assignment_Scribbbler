@@ -1,0 +1,187 @@
+*{
+  box-sizing: border-box;
+}
+
+
+#title-caption{
+    width: 50%;
+}
+
+.flt-l{
+    float: left;
+}   
+
+.flt-r{
+    float: right;
+}
+header::after{
+    content: '';
+    display: table;
+    clear: both;
+}
+
+.hdr-btns{   
+    height: 100%;
+    width:50%;
+    justify-content:end;
+}
+
+.title{
+    font-family: 'Montez', cursive;
+    font-size: 200%;
+    color: blue;  
+}
+
+#caption{
+    font-family: 'Ubuntu Mono', monospace;
+    font-weight: bold;
+    padding-top: 0px;
+    margin-top: 0px;
+}
+
+header .btn-sign {
+    /*display:inline-block*/
+    width: max-content;
+    margin: 10px;    
+    padding: 1%;
+    float: right;
+    
+     background-color: blue;
+    color: azure;
+}
+
+
+  /* The Modal (background) */
+  .modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    
+    width: 100%; /* Full width */
+    height: 100%;
+    overflow: auto; /* Enable scroll if needed */
+    background-color: #595a5cea;
+    padding-top: 50px;
+    font-family: Arial, Helvetica, sans-serif;
+  } 
+  
+  /* Modal container/Box */
+  .modal-container {
+    background-color: #fefefe;
+    margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+    border: 1px solid #888;
+    width: 40%; /* Could be more or less, depending on screen size */
+
+    position: relative;
+    display: flex;
+    flex-direction: column;  
+    pointer-events: auto;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid rgba(0,0,0,.2);
+    border-radius: .3rem;
+    outline: 0;
+  }
+
+  @media screen and (max-width: 450px) {
+    .modal-container {
+      width: 75%; /* The width is 100%, when the viewport is 450px or smaller */
+    }
+
+    #title-caption, .hdr-btns{
+      font-size: 3vw;
+    }
+
+  }
+
+  @media screen and (max-width: 330px) {
+    .modal-container {
+      width: 90%; /* The width is 100%, when the viewport is 450px or smaller */
+    }
+    #title-caption, .hdr-btns{
+      font-size: 3vw;
+    }
+  }
+
+    /* Add padding to content elements */
+    .modal-content,.modal-container {
+        padding: 5px 10px;
+      
+      }
+    
+      hr {
+        border: 1px solid #757070;
+        margin: 2px 2px;
+      }
+
+      @media screen and (max) {
+        
+      }
+
+.clearfix::after{
+    content: "";
+    display: table;
+    clear: both;
+}
+  
+/* Full-width input fields */
+input[type=text], input[type=password] {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0 12px 0;
+    display: inline-block;
+    border: none;
+    background: #f1f1f1;
+  }
+  
+  /* Add a background color when the inputs get focus */
+  input[type=text]:focus, input[type=password]:focus {
+    background-color: #ddd;
+    outline: none;
+  }
+  
+  /* Set a style for all buttons */
+  .modal .btn-grn {
+    background-color: #04AA6D;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    opacity: 0.8;
+    border-radius: 3px;
+  }
+  
+  .modal button:hover {
+    opacity:1;
+  }
+  
+
+  /* Float signup buttons */
+  .signupbtn {
+    float: left;
+    width: 100%;
+  }
+
+    /* The Close Button (x) */
+    .close {
+        position: absolute;
+        right: 35px;
+        top: 15px;
+        font-size: 25px;    
+        color: #413f3f;
+      }
+      
+      .close:hover,
+      .close:focus {
+        color: #ee2e2e94;
+        cursor: pointer;
+      }
+
+      #non-member-signup{
+        display: flex;
+        justify-content:center;
+      }

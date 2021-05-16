@@ -3,11 +3,144 @@
 
 <head>
     <!-- TODO: Include Font Awesome file here -->
+    <script src="https://kit.fontawesome.com/bd3637186c.js" crossorigin="anonymous"></script>
     <!-- TODO: Include Google Fonts file here -->
+    <link href="https://fonts.googleapis.com/css?family=Montez&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono:ital@1&display=swap" rel="stylesheet">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" media="screen" href="styles/common.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="styles/index.css" />
+
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
 <body>
     <!-- TODO: Include all your code for the header and home page here -->
+    <div class="all-contents">
+        <header>
+            <div class="flt-l" id="title-caption">
+                <span class="title"><b>ScriBBler</b></span>
+                <p id="caption">Explore, Imagine, Create</p>
+            </div>
+
+            <div class="flt-r hdr-btns">
+                <button type="button" class="btn-sign" id="btn-SignIn">Sign In</button>
+                <button type="button" class="btn-sign" id="btn-SignUp">Sign Up</button>
+            </div>
+        </header>
+
+        <div id="body-content">
+            <div class="postbutton">
+                <a href="html/postslist.html"><button type="button" class="postsbutton">All Posts</button></a>
+                <button type="button" id="indx-createpost" class="postsbutton">Create Post</button>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Modal sign up-->
+    <div id="modal-signUp" class="modal">
+
+        <form class="modal-container">
+            <div class="modal-header">
+                <h2>Get Started</h2>
+                <span class="close" id="icn-close-modal" title="Close Modal"><b>&times;</b></span>
+            </div>
+            <hr />
+
+            <div class="modal-content"></div>
+            <label for="Name"><b>Name</b></label>
+            <input type="text" placeholder="Enter your name" name="Name" required
+                oninvalid="this.setCustomValidity('Please fill out this field.')"
+                oninput="this.setCustomValidity('')" />
+
+            <label for="Username"><b>Username</b></label>
+            <input type="text" placeholder="Enter your username" name="Username" required
+                oninvalid="this.setCustomValidity('Please fill out this field.')"
+                oninput="this.setCustomValidity('')" />
+
+            <label for="psw"><b>Password</b></label>
+            <input type="password" placeholder="Enter your password" name="psw" required
+                oninvalid="this.setCustomValidity('Please fill out this field.')"
+                oninput="this.setCustomValidity('')" />
+
+            <label for="psw-repeat"><b>Confirm Password</b></label>
+            <input type="password" placeholder="Re-enter your password" name="psw-repeat" required
+                oninvalid="this.setCustomValidity('Please fill out this field.')"
+                oninput="this.setCustomValidity('')" />
+
+            <div class="clearfix"></div>
+            <button type="submit" class="btn-grn signupbtn">Sign Up</button>
+    </div>
+
+    </div>
+    </form>
+    </div>
+
+    <!-- Modal sign in-->
+    <div id="modal-signIn" class="modal">
+
+        <form class="modal-container">
+            <div class="modal-header">
+                <h2>Welcome Back!</h2>
+                <span class="close" title="Close Modal">&times;</span>
+            </div>
+            <hr />
+
+            <div class="modal-content">
+                <label for="Username"><b>Username</b></label>
+                <input type="text" placeholder="Enter your username" name="Username" required
+                    oninvalid="this.setCustomValidity('Please fill out this field.')"
+                    oninput="this.setCustomValidity('')" />
+
+                <label for="psw"><b>Password</b></label>
+                <input type="password" placeholder="Enter your password" name="psw" required
+                    oninvalid="this.setCustomValidity('Please fill out this field.')"
+                    oninput="this.setCustomValidity('')" />
+
+                <div class="clearfix"></div>
+                <button type="submit" class="btn-grn signinbtn">Sign In</button>
+            </div>
+            <p id="non-member-signup">Not a member? <a href="#" id="link-signUp" type="button">Sign Up</a></p>
+    </div>
+    </form>
+    </div>
+
+
+    <!-- Modal Create post-->
+    <div id="modal-createPost" class="modal">
+        
+        <form class="form-modal-createPost modal-container clearfix">
+            <div class="modal-header">
+                <h2>Pen Your Post</h2>
+                <span class="close" title="Close Modal">&times;</span>
+            </div>
+            <hr />
+
+            <div class="modal-content">
+                <label for="Title"><b>Title</b></label>
+                <input type="text" placeholder="Enter title of your post" name="Title" required
+                    oninvalid="this.setCustomValidity('Please fill out this field.')"
+                    oninput="this.setCustomValidity('')" />
+
+                <label for="Contents"><b>Contents</b></label>
+                <input type="text" id="post-content" placeholder="Enter the contents of your post" name="Contents" required
+                    oninvalid="this.setCustomValidity('Please fill out this field.')"
+                    oninput="this.setCustomValidity('')"/>
+                <div class="btn-container">
+                    <button type="submit" id="btn-createPost">Create</button>
+                </div>
+            
+                </div>            
+        </form>
+    </div>
+
+    <script src="scripts/common.js"></script>
+    <script src="scripts/index.js"></script>
+
+
 </body>
 
 </html>
